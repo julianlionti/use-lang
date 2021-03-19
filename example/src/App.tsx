@@ -13,7 +13,7 @@ const InnerComponent = () => {
       <p>{t.name}</p>
       <button
         onClick={() => {
-          setLang((acc) => (acc == 'es' ? 'en' : 'es'))
+          setLang((acc) => (acc === 'es' ? 'en' : 'es'))
         }}>
         {t.changeLang}
       </button>
