@@ -2,7 +2,7 @@
     "compilerOptions": {
       "target": "es5",
       "module": "ES2015",
-      "lib": ["es6", "DOM"],
+      "lib": ["ESNext", "DOM"],
       "outDir": "build",
       "rootDir": "src",
       "jsx": "react",

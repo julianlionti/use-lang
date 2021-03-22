@@ -16,7 +16,7 @@ export const LangContext = createContext<ContextType<any>>([intialState, () => {
 export const useLangContext = <T,>(): ContextType<T> => useContext(LangContext)
 
 export interface ProviderPros<T> extends React.PropsWithChildren<ContextState<T>> {
-  onLang: (lang: Langs) => void
+  onLang?: (lang: Langs) => void
 }
 
 export const LangProvider = <T,>(props: ProviderPros<T>): JSX.Element => {
@@ -24,7 +24,9 @@ export const LangProvider = <T,>(props: ProviderPros<T>): JSX.Element => {
   const [state, setState] = useState<ContextState<T>>({ lang, translations })
 
   useDidUpdate(() => {
-    onLang(state.lang)
+    if (onLang) {
+      onLang(state.lang)
+    }
   }, [state.lang])
 
   return <LangContext.Provider value={[state, setState]}>{children}</LangContext.Provider>

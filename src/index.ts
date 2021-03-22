@@ -1,5 +1,6 @@
 export { createLangCtx } from './providers/LangContext'
-export type { Langs } from './providers/LangProvider'
+export type { Langs, ProviderPros } from './providers/LangProvider'
+export { AttrString } from './utils/StringUtils'
 // export { UserAxiosProvider } from './providers/UserAxiosProvider'
 // export { makeRequest } from './services/requests'
 // export { useAxios } from './hooks/useAxios'
