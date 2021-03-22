@@ -1,6 +1,6 @@
 {
   "name": "use-lang",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "useLang for react and react-native",
   "main": "build/index.js",
   "module": "build/index.es.js",
